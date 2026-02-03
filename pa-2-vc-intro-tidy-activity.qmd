@@ -125,11 +125,8 @@ By altering this top secret set of numbers, you will be able to create a message
 9.  Square every number.
 
 ```{r}
-#| label: add-label-2
-#add comment here
-#there are several ways to do this, the way below doesn't overwrite any column so you "don't lose work"
-#add comment here
-#there are several ways to do this, the way below doesn't overwrite any column so you "don't lose work"
+#| label: top_secret_math
+#changed top_secret to code break; add math
 
 code_break <- top_secret |> 
   as_tibble() |> 
@@ -147,11 +144,11 @@ head(code_break) #see the first few lines here
 *Hint:* This is what is called a "relational" comparison, where you compare an object to a number and R will give you a vector of TRUEs and FALSEs based on whether the comparison is / is not met. You can then use these TRUEs and FALSEs as numbers, since TRUE = 1 and FALSE = 0 in R land.
 
 ```{r}
-#| label: add-label-3
-#add comment here
+#| label: rational_comparison
+#added rational comparison
 
-
-
+code_break |> 
+  summarize(total = sum(step9 < 17))
 ```
 
 <!-- Computer Stage your Changes, Commit, and Push to the Git Repository-->
